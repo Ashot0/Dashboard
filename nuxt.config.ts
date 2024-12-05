@@ -3,7 +3,6 @@ import Components from 'unplugin-vue-components/vite';
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
 
 export default defineNuxtConfig({
-	builder: 'vite',
 	compatibilityDate: '2024-11-01',
 	devtools: { enabled: true },
 	typescript: {
