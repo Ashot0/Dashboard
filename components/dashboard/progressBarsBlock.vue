@@ -1,6 +1,6 @@
 <template>
 	<div class="progress-bars-block">
-		<dev :class="'progress-bars-block__graph-wrapper'">
+		<div :class="'progress-bars-block__graph-wrapper'">
 			<div class="progress-bars-block__graph-size">
 				<p>0</p>
 				<p>100</p>
@@ -14,8 +14,8 @@
 				class="progress-bars-block__graph-line"
 				:style="`height: ${item}%`"
 			></div>
-		</dev>
-		<h3 class="progress-bars-block__title">{{ props.title }}</h3>
+		</div>
+		<h3 class="progress-bars-block__title title-base">{{ props.title }}</h3>
 		<p class="progress-bars-block__percent">
 			<span
 				:class="
@@ -50,6 +50,7 @@ const props = defineProps<{
 	num: number[];
 	percent: number;
 	items: {
+		id: number;
 		image: any;
 		title: string;
 		num: string;
@@ -62,8 +63,6 @@ const props = defineProps<{
 <style scoped lang="scss">
 .progress-bars-block {
 	height: 445px;
-	width: 40.75%;
-	min-width: 440px;
 	border-radius: 20px;
 	padding: 16px 16px 30.5px 16px;
 	background: rgb(6, 11, 40);
@@ -73,10 +72,6 @@ const props = defineProps<{
 		rgba(10, 14, 35, 0.71) 100%
 	);
 	color: var(--white-color);
-	@media (max-width: 1024px) {
-		width: 100%;
-		min-width: 100%;
-	}
 	&__graph-wrapper {
 		position: relative;
 		display: flex;
@@ -108,9 +103,6 @@ const props = defineProps<{
 	}
 
 	&__title {
-		font-size: 18px;
-		font-weight: bold;
-		line-height: 140%;
 		margin-bottom: 6px;
 	}
 

@@ -1,6 +1,8 @@
 <template>
 	<div class="circular-progress-bar-small">
-		<h4 class="circular-progress-bar-small__title">{{ props.title }}</h4>
+		<h4 class="circular-progress-bar-small__title title-base">
+			{{ props.title }}
+		</h4>
 		<h5 class="circular-progress-bar-small__sub-title">{{ props.subTitle }}</h5>
 		<div class="circular-progress-bar-small__dashboard-wrapper">
 			<a-progress
@@ -46,8 +48,6 @@ const props = defineProps<{
 	position: relative;
 	border-radius: 20px;
 	padding: 26px 28px 38px 28px;
-	min-width: 250px;
-	width: 21.88%;
 	height: 344px;
 	background: rgb(6, 11, 40);
 	background: linear-gradient(
@@ -57,9 +57,6 @@ const props = defineProps<{
 	);
 	&__title {
 		color: var(--white-color);
-		font-size: 18px;
-		line-height: 140%;
-		font-weight: bold;
 		margin-bottom: 4px;
 	}
 

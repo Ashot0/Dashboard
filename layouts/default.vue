@@ -84,7 +84,7 @@ onMounted(() => {
 		z-index: 25;
 		position: absolute;
 		left: 0;
-		transition: all 1s;
+		transition: all 0.3s;
 
 		&_visible {
 			@media (max-width: 1600px) {

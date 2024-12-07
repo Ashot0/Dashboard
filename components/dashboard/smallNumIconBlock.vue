@@ -2,7 +2,7 @@
 	<div class="small-num-icon-block">
 		<div class="small-num-icon-block__text">
 			<p class="small-num-icon-block__name">{{ props.name }}</p>
-			<p class="small-num-icon-block__num">
+			<p class="small-num-icon-block__num title-base">
 				{{ props.num }}
 				<span
 					v-if="props.percent && props.percent !== 0"
@@ -38,21 +38,13 @@ const props = defineProps<{
 		rgba(6, 11, 38, 0.74) 0%,
 		rgba(26, 31, 55, 0.5) 100%
 	);
-	// max-width: 382px;
-	width: 24%;
-	min-width: 250px;
 	height: 80px;
 	display: flex;
 	justify-content: space-between;
 	padding: 17.5px 18px 17.5px 21px;
 	align-items: center;
 	border-radius: 20px;
-	@media (max-width: 1024px) {
-		width: 49%;
-	}
-	@media (max-width: 640px) {
-		width: 100%;
-	}
+
 	&__text {
 		display: flex;
 		flex-direction: column;
@@ -67,9 +59,6 @@ const props = defineProps<{
 
 	&__num {
 		color: var(--white-color);
-		font-size: 18px;
-		line-height: 140%;
-		font-weight: bold;
 	}
 	&__percent {
 		font-size: 14px;

@@ -21,16 +21,10 @@ const props = defineProps<{
 .welcome-back-block {
 	position: relative;
 	border-radius: 20px;
-	min-width: 290px;
-	width: 40.75%;
-	height: 344px;
 	padding: 36px 32px;
 	background: center / cover no-repeat
 		url('/assets/Images/braden-collum-CBcS51cGoSw-unsplash\ 1.png');
 
-	@media (max-width: 768px) {
-		width: 100%;
-	}
 	&__title {
 		font-size: 14px;
 		font-weight: 500;

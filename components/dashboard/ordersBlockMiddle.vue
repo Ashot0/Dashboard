@@ -81,7 +81,6 @@ const projects = [
 
 <style scoped lang="scss">
 .orders-block-middle {
-	width: 32.44%;
 	height: 519px;
 	border-radius: 20px;
 	background: rgb(6, 11, 40);
@@ -92,9 +91,6 @@ const projects = [
 	);
 	padding: 28px 21px 31px 21px;
 
-	@media (max-width: 1024px) {
-		width: 100%;
-	}
 	&__title {
 		font-size: 18px;
 		font-weight: bold;

@@ -1,6 +1,7 @@
 <template>
 	<div class="dashboard">
 		<DashboardSmallNumIconBlock
+			class="dashboard__small-num-block"
 			:name="'Today’s Money'"
 			:num="'$53,000'"
 			:percent="55"
@@ -10,6 +11,7 @@
 			</template>
 		</DashboardSmallNumIconBlock>
 		<DashboardSmallNumIconBlock
+			class="dashboard__small-num-block"
 			:name="'Today’s Users'"
 			:num="'2,300'"
 			:percent="5"
@@ -19,6 +21,7 @@
 			</template>
 		</DashboardSmallNumIconBlock>
 		<DashboardSmallNumIconBlock
+			class="dashboard__small-num-block"
 			:name="'New Clients'"
 			:num="'+3,052'"
 			:percent="-14"
@@ -28,6 +31,7 @@
 			</template>
 		</DashboardSmallNumIconBlock>
 		<DashboardSmallNumIconBlock
+			class="dashboard__small-num-block"
 			:name="'Total Sales'"
 			:num="'$173,000'"
 			:percent="8"
@@ -36,31 +40,42 @@
 				<CartIcon />
 			</template>
 		</DashboardSmallNumIconBlock>
-		<DashboardWelcomeBackBlock :name="'Mark Johnson'" />
+		<DashboardWelcomeBackBlock
+			class="dashboard__welcome-back-block"
+			:name="'Mark Johnson'"
+		/>
 		<DashboardCircularProgressBarSmall
+			class="dashboard__circular-progress-bar-small"
 			:title="'Satisfaction Rate'"
 			:subTitle="'From all projects'"
 			:percent="75"
 		/>
 		<DashboardCircularProgressBarBig
+			class="dashboard__circular-progress-bar-big"
 			:title="'Referral Tracking'"
 			:invited="145"
 			:bonus="'1,465'"
 			:totalStore="9.3"
 		/>
 		<DashboardGraphBigBlock
+			class="dashboard__graph-big-block"
 			:title="'Sales overview'"
 			:num="[1, 2, 3, 4, 5]"
 			:percent="5"
 		/>
 		<DashboardProgressBarsBlock
+			class="dashboard__progress-bars-block"
 			:title="'Active Users'"
 			:num="num"
 			:percent="23"
-			:items="items"
+			:items="itemsStore.items"
 		/>
-		<DashboardProjectsBigBlock />
-		<DashboardOrdersBlockMiddle />
+		<DashboardProjectsBigBlock
+			class="dashboard__projects-big-block"
+			v-if="projectsStore.projects.length === projectsStore.ProjectCount"
+			:projects="projectsStore.projects"
+		/>
+		<DashboardOrdersBlockMiddle class="dashboard__orders-block-middle" />
 	</div>
 </template>
 
@@ -70,42 +85,13 @@ import {
 	GlobeIcon,
 	DocumentIcon,
 	CartIcon,
-	Rocket,
-	SettingKey,
 } from '@/assets/Icons/icons';
-const items = [
-	{
-		image: WalletIcon,
-		title: 'Users',
-		num: '32,984',
-		sumbol: '',
-		percent: 66,
-	},
-	{
-		image: Rocket,
-		title: 'Clicks',
-		num: '2,45',
-		sumbol: 'm',
-		percent: 85,
-	},
-	{
-		image: CartIcon,
-		title: 'Sales',
-		num: '2,400',
-		sumbol: '$',
-		percent: 40,
-	},
-	{
-		image: SettingKey,
-		title: 'Settings',
-		num: '320',
-		sumbol: '',
-		percent: 60,
-	},
-];
-const num = [64, 46, 24, 58, 100, 82, 94, 58, 32];
+import { useProjectsStore } from '@/stores/projects';
+import { useItemsStore } from '@/stores/items';
 
-const route = useRoute();
+const projectsStore = useProjectsStore();
+const itemsStore = useItemsStore();
+const num = [64, 46, 24, 58, 100, 82, 94, 58, 32];
 </script>
 
 <style scoped lang="scss">
@@ -113,5 +99,79 @@ const route = useRoute();
 	display: flex;
 	gap: 24px 1%;
 	flex-wrap: wrap;
+	max-width: 100vw;
+	&__small-num-block {
+		// max-width: 382px;
+		width: 24%;
+		min-width: 250px;
+		@media (max-width: 1024px) {
+			width: 49%;
+		}
+		@media (max-width: 640px) {
+			width: 100%;
+		}
+	}
+
+	&__welcome-back-block {
+		min-width: 290px;
+		width: 40.75%;
+		height: 344px;
+		@media (max-width: 768px) {
+			width: 100%;
+		}
+	}
+
+	&__circular-progress-bar-small {
+		min-width: 250px;
+		width: 21.88%;
+		@media (max-width: 1024px) {
+			width: 100%;
+		}
+	}
+
+	&__circular-progress-bar-big {
+		min-width: 451px;
+		width: 34.44%;
+		@media (max-width: 1024px) and (min-width: 768px) {
+			width: 100%;
+		}
+		@media (max-width: 768px) {
+			min-width: 310px;
+			max-width: 100%;
+		}
+	}
+
+	&__graph-big-block {
+		width: 57.75%;
+		min-width: 412px;
+		@media (max-width: 1024px) {
+			width: 100%;
+			min-width: 100%;
+			max-width: 100%;
+		}
+	}
+
+	&__progress-bars-block {
+		width: 40.75%;
+		min-width: 440px;
+		@media (max-width: 1024px) {
+			width: 100%;
+			min-width: 100%;
+		}
+	}
+
+	&__projects-big-block {
+		width: 66.06%;
+		@media (max-width: 1024px) {
+			width: 100%;
+		}
+	}
+
+	&__orders-block-middle {
+		width: 32.44%;
+		@media (max-width: 1024px) {
+			width: 100%;
+		}
+	}
 }
 </style>

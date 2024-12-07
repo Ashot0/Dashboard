@@ -109,8 +109,6 @@ const props = defineProps<{
 <style scoped lang="scss">
 .graph-big-block {
 	height: 445px;
-	width: 57.75%;
-	min-width: 412px;
 	border-radius: 20px;
 	padding: 28px 19px 29px 21px;
 	background: rgb(6, 11, 40);
@@ -119,10 +117,6 @@ const props = defineProps<{
 		rgba(6, 11, 40, 0.74) 0%,
 		rgba(10, 14, 35, 0.71) 100%
 	);
-	@media (max-width: 1024px) {
-		width: 100%;
-		min-width: 100%;
-	}
 	&__title {
 		font-size: 18px;
 		font-weight: bold;

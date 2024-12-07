@@ -1,7 +1,9 @@
 <template>
 	<div class="circular-progress-bar-big">
 		<div class="circular-progress-bar-big__info">
-			<h4 class="circular-progress-bar-big__title">{{ props.title }}</h4>
+			<h4 class="circular-progress-bar-big__title title-base">
+				{{ props.title }}
+			</h4>
 			<div class="circular-progress-bar-big__num-block">
 				<h5 class="circular-progress-bar-big__sub-title">Invited</h5>
 				<p class="circular-progress-bar-big__number">
@@ -56,8 +58,6 @@ const props = defineProps<{
 	padding: 27px 31px 44px 1.94%;
 	position: relative;
 	border-radius: 20px;
-	min-width: 451px;
-	width: 34.44%;
 	height: 344px;
 	background: rgb(6, 11, 40);
 	background: linear-gradient(
@@ -68,12 +68,8 @@ const props = defineProps<{
 	color: var(--white-color);
 	display: flex;
 	justify-content: space-between;
-	@media (max-width: 1024px) and (min-width: 768px) {
-		width: 100%;
-	}
 	@media (max-width: 768px) {
 		flex-direction: column;
-		min-width: 310px;
 		height: fit-content;
 	}
 	&__info {
@@ -82,8 +78,6 @@ const props = defineProps<{
 	}
 
 	&__title {
-		font-size: 18px;
-		line-height: 140%;
 		margin-bottom: 41px;
 	}
 
