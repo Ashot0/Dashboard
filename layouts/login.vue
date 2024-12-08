@@ -27,6 +27,9 @@
 	background-color: black;
 	overflow-x: hidden;
 	max-width: 100vw;
+	&::-webkit-scrollbar {
+		display: none;
+	}
 	&__header {
 		z-index: 11;
 	}

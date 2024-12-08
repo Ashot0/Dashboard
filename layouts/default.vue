@@ -64,6 +64,7 @@ onMounted(() => {
 		rotationZ: '360deg',
 		duration: 150,
 		repeat: -1,
+		ease: 'linear',
 	});
 });
 </script>
@@ -128,6 +129,10 @@ onMounted(() => {
 		flex: 1;
 		height: auto;
 		min-height: 100vh;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
 	}
 	&__rotating-bg {
 		z-index: 0;

@@ -26,6 +26,7 @@ onMounted(() => {
 		rotationZ: '360deg',
 		duration: 150,
 		repeat: -1,
+		ease: 'linear',
 	});
 });
 </script>
@@ -39,7 +40,7 @@ onMounted(() => {
 	overflow: hidden;
 	position: relative;
 	&__image-wrapper {
-		width: 100%;
+		// width: 50%;
 		height: 100%;
 		position: relative;
 		overflow: hidden;
@@ -49,19 +50,18 @@ onMounted(() => {
 	}
 
 	&__rotating-bg {
+		z-index: 0;
 		object-fit: cover;
 		position: fixed;
 		min-height: 150vh;
 		width: 125vw;
-		// top: -25%;
-		// left: -75%;
 	}
 
 	&__text {
 		font-family: var(--jakarta);
-		position: absolute;
+		position: fixed;
 		transform: translate(-50%);
-		left: 50%;
+		left: 25%;
 		top: 50%;
 		z-index: 12;
 		color: var(--white-color);
