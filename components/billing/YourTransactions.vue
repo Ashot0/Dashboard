@@ -16,7 +16,7 @@
 				<div
 					class="transaction__icon"
 					:class="[
-						transaction.amount < 0
+						transaction.amount >= 0
 							? 'transaction__icon_up'
 							: 'transaction__icon_down',
 						transaction.status && 'transaction__icon_warning',
@@ -33,14 +33,18 @@
 					class="transaction__sum"
 					:class="transaction.amount > 0 ? 'transaction__sum_up' : ''"
 				>
-					<span v-if="transaction.status">{{ transaction.status }}</span>
+					<span class="transaction__icon_warning" v-if="transaction.status">{{
+						transaction.status
+					}}</span>
 					<span v-else
 						><span v-if="transaction.amount > 0">+</span
 						>{{ transaction.amount }}$</span
 					>
 				</div>
 			</div>
+
 			<div class="your-transactions__sub-title">YESTERDAY</div>
+
 			<div
 				v-for="transaction in transactionsBefore"
 				class="your-transactions__transaction transaction"
@@ -48,7 +52,7 @@
 				<div
 					class="transaction__icon"
 					:class="[
-						transaction.amount < 0
+						transaction.amount >= 0
 							? 'transaction__icon_up'
 							: 'transaction__icon_down',
 						transaction.status && 'transaction__icon_warning',
@@ -65,7 +69,9 @@
 					class="transaction__sum"
 					:class="transaction.amount > 0 ? 'transaction__sum_up' : ''"
 				>
-					<span v-if="transaction.status">{{ transaction.status }}</span>
+					<span class="transaction__icon_warning" v-if="transaction.status">{{
+						transaction.status
+					}}</span>
 					<span v-else
 						><span v-if="transaction.amount > 0">+</span
 						>{{ transaction.amount }}$</span

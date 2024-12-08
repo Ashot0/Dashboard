@@ -40,7 +40,7 @@ export const useItemsStore = defineStore('items', {
 			{
 				id: 4,
 				image: SettingKey,
-				title: 'Settings',
+				title: 'Items',
 				num: '320',
 				sumbol: '',
 				percent: 60,

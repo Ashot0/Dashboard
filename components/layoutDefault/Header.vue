@@ -24,11 +24,7 @@
 			>
 				<PersonIcon class="header__sign-in-icon" /> Sign In
 			</button>
-			<button
-				@click="navigateTo('/setting')"
-				class="header__setting"
-				type="button"
-			>
+			<button @click="navigateTo('/rtl')" class="header__setting" type="button">
 				<SettingIcon class="header__setting-icon" />
 			</button>
 			<button

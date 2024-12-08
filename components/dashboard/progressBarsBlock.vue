@@ -64,7 +64,7 @@ const props = defineProps<{
 .progress-bars-block {
 	height: 445px;
 	border-radius: 20px;
-	padding: 16px 16px 30.5px 16px;
+	padding: 16px 16px 30.5px 8px;
 	background: rgb(6, 11, 40);
 	background: linear-gradient(
 		135deg,
@@ -90,6 +90,7 @@ const props = defineProps<{
 		);
 	}
 	&__graph-size {
+		font-size: 10px;
 		height: 152px;
 		display: flex;
 		flex-direction: column-reverse;
@@ -104,9 +105,11 @@ const props = defineProps<{
 
 	&__title {
 		margin-bottom: 6px;
+		margin-left: 5px;
 	}
 
 	&__percent {
+		margin-left: 5px;
 		margin-bottom: 36px;
 		line-height: 140%;
 		color: var(--grey-color);
@@ -121,6 +124,7 @@ const props = defineProps<{
 		}
 	}
 	&__items {
+		margin-left: 5px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;

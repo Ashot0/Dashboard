@@ -99,12 +99,14 @@ const num = [64, 46, 24, 58, 100, 82, 94, 58, 32];
 	display: flex;
 	gap: 24px 1%;
 	flex-wrap: wrap;
-	max-width: 100vw;
+	max-width: 99vw;
+	overflow: hidden;
 	&__small-num-block {
 		// max-width: 382px;
 		width: 24%;
 		min-width: 250px;
-		@media (max-width: 1024px) {
+
+		@media (max-width: 1280px) {
 			width: 49%;
 		}
 		@media (max-width: 640px) {
@@ -116,7 +118,8 @@ const num = [64, 46, 24, 58, 100, 82, 94, 58, 32];
 		min-width: 290px;
 		width: 40.75%;
 		height: 344px;
-		@media (max-width: 768px) {
+
+		@media (max-width: 1280px) {
 			width: 100%;
 		}
 	}
@@ -124,6 +127,9 @@ const num = [64, 46, 24, 58, 100, 82, 94, 58, 32];
 	&__circular-progress-bar-small {
 		min-width: 250px;
 		width: 21.88%;
+		@media (max-width: 1280px) and (min-width: 1024px) {
+			width: 49%;
+		}
 		@media (max-width: 1024px) {
 			width: 100%;
 		}
@@ -132,6 +138,9 @@ const num = [64, 46, 24, 58, 100, 82, 94, 58, 32];
 	&__circular-progress-bar-big {
 		min-width: 451px;
 		width: 34.44%;
+		@media (max-width: 1280px) and (min-width: 1024px) {
+			width: 49%;
+		}
 		@media (max-width: 1024px) and (min-width: 768px) {
 			width: 100%;
 		}
@@ -144,6 +153,9 @@ const num = [64, 46, 24, 58, 100, 82, 94, 58, 32];
 	&__graph-big-block {
 		width: 57.75%;
 		min-width: 412px;
+		@media (max-width: 1280px) and (min-width: 1024px) {
+			width: 49%;
+		}
 		@media (max-width: 1024px) {
 			width: 100%;
 			min-width: 100%;
@@ -154,6 +166,9 @@ const num = [64, 46, 24, 58, 100, 82, 94, 58, 32];
 	&__progress-bars-block {
 		width: 40.75%;
 		min-width: 440px;
+		@media (max-width: 1280px) and (min-width: 1024px) {
+			width: 49%;
+		}
 		@media (max-width: 1024px) {
 			width: 100%;
 			min-width: 100%;

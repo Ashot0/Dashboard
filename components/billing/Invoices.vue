@@ -48,7 +48,7 @@ const info = [
 	color: var(--white-color);
 	display: flex;
 	flex-direction: column;
-	gap: 27.5px;
+	gap: 22px;
 
 	&__top {
 		display: flex;
@@ -95,6 +95,7 @@ const info = [
 	}
 
 	&__sum {
+		font-size: 12px;
 		color: var(--grey-color);
 	}
 	&__pdf {

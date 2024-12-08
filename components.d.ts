@@ -8,6 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AProgress: typeof import('ant-design-vue/es')['Progress']
+    ASwitch: typeof import('ant-design-vue/es')['Switch']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

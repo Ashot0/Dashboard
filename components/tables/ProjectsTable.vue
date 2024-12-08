@@ -70,6 +70,7 @@ const props = defineProps<{
 <style scoped lang="scss">
 .projects-table {
 	height: 519px;
+	overflow: hidden;
 	border-radius: 20px;
 	padding: 20px 22px 31.5px 22px;
 	background: rgb(6, 11, 40);

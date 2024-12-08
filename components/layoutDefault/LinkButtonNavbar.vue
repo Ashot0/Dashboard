@@ -71,6 +71,10 @@ onMounted(() => {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		* {
+			width: 14px;
+			height: 14px;
+		}
 		&_active {
 			background: var(--nav-btn-icon-color);
 			color: var(--white-color);

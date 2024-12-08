@@ -1,22 +1,27 @@
 <template>
 	<div class="help-section-navbar">
-		<button @click="navigateTo" class="help-section-navbar__button">
+		<a
+			target="_blank"
+			href="https://ashot0.github.io/Portfolio.2.0-public/#/"
+			class="help-section-navbar__link"
+		>
 			<NavNeedhelpIcon class="help-section-navbar__img" />
-		</button>
+		</a>
 		<h3 class="help-section-navbar__title">Need help?</h3>
-		<h4 class="help-section-navbar__subtitle">Please check our docs</h4>
-		<button @click="navigateTo" class="help-section-navbar__doc-btn">
-			DOCUMENTATION
-		</button>
+		<h4 class="help-section-navbar__subtitle">Please check my link</h4>
+		<a
+			target="_blank"
+			href="https://ashot0.github.io/Portfolio.2.0-public/#/"
+			class="help-section-navbar__doc-btn"
+		>
+			LINK
+		</a>
 	</div>
 </template>
 
 <script setup lang="ts">
 import { NavNeedhelpIcon } from '@/assets/Icons/icons';
 const router = useRouter();
-const navigateTo = () => {
-	router.push('/documentation');
-};
 </script>
 <style scoped lang="scss">
 .help-section-navbar {
@@ -35,7 +40,11 @@ const navigateTo = () => {
 		background: center / cover no-repeat
 			url('/assets/Images/BackgroundHelp.png');
 	}
-	&__button {
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: fit-content;
 		background-color: var(--white-color);
 		padding: 8.5px;
 		border-radius: 12px;
@@ -62,6 +71,9 @@ const navigateTo = () => {
 	}
 
 	&__doc-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		width: 100%;
 		height: 35px;
 		border-radius: 12px;
