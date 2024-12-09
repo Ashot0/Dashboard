@@ -6,8 +6,8 @@
 import { ref, onMounted } from 'vue';
 import * as echarts from 'echarts';
 import 'echarts-gl';
-
-const ROOT_PATH = 'https://echarts.apache.org/examples';
+import earth from '@/assets/Images/texture/world.topo.bathy.200401.jpg';
+import starfield from '@/assets/Images/texture/starfield.jpg';
 
 const chartDom = ref(null);
 
@@ -17,11 +17,11 @@ onMounted(() => {
 		const option = {
 			backgroundColor: '#000',
 			globe: {
-				baseTexture: ROOT_PATH + '/data-gl/asset/world.topo.bathy.200401.jpg',
-				heightTexture: ROOT_PATH + '/data-gl/asset/world.topo.bathy.200401.jpg',
+				baseTexture: earth,
+				heightTexture: earth,
 				displacementScale: 0.04,
 				shading: 'realistic',
-				environment: ROOT_PATH + '/data-gl/asset/starfield.jpg',
+				environment: starfield,
 				realisticMaterial: {
 					roughness: 0.9,
 				},
@@ -34,7 +34,7 @@ onMounted(() => {
 						shadow: true,
 					},
 					ambientCubemap: {
-						texture: ROOT_PATH + '/data-gl/asset/pisa.hdr',
+						texture: earth,
 						diffuseIntensity: 0.2,
 					},
 				},

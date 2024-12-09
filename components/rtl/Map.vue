@@ -6,8 +6,8 @@
 import { ref, onMounted } from 'vue';
 import * as echarts from 'echarts';
 import 'echarts-gl';
-
-const ROOT_PATH = 'https://echarts.apache.org/examples';
+import earth from '@/assets/Images/texture/earth.jpg';
+import starfield from '@/assets/Images/texture/starfield.jpg';
 
 const chartDom = ref(null);
 
@@ -17,9 +17,9 @@ onMounted(() => {
 		const option = {
 			backgroundColor: '#000',
 			globe: {
-				baseTexture: ROOT_PATH + '/data-gl/asset/earth.jpg',
+				baseTexture: earth,
 				shading: 'lambert',
-				environment: ROOT_PATH + '/data-gl/asset/starfield.jpg',
+				environment: starfield,
 				atmosphere: {
 					show: true,
 				},
