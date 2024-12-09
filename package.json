@@ -20,9 +20,9 @@
 		"nuxt": "^3.14.1592",
 		"pinia": "^2.3.0",
 		"three": "^0.171.0",
-		"vue": "latest",
+		"vue": "^3.5.13",
 		"vue-chartjs": "^5.3.2",
-		"vue-router": "latest"
+		"vue-router": "^4.5.0"
 	},
 	"devDependencies": {
 		"@typescript-eslint/eslint-plugin": "^8.18.0",
@@ -31,7 +31,7 @@
 		"eslint": "^9.16.0",
 		"sass": "^1.82.0",
 		"sass-embedded": "^1.82.0",
-		"typescript": "^5.7.2",
+		"typescript": "^5.2.2",
 		"unplugin-vue-components": "^0.27.5",
 		"vite-plugin-checker": "^0.8.0",
 		"vite-svg-loader": "^5.1.0",
