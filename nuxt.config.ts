@@ -22,12 +22,4 @@ export default defineNuxtConfig({
 			}),
 		],
 	},
-	build: {
-		transpile: ['lodash-es'],
-	},
-	nitro: {
-		externals: {
-			inline: ['lodash-es'],
-		},
-	},
 });
