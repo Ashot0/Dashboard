@@ -1,9 +1,9 @@
 import svgLoader from 'vite-svg-loader';
 import Components from 'unplugin-vue-components/vite';
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
-import isEqual from 'lodash-es/isEqual.js';
 
 export default defineNuxtConfig({
+	ssr: true,
 	compatibilityDate: '2024-11-01',
 	devtools: { enabled: true },
 	typescript: {

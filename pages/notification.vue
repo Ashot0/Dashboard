@@ -1,12 +1,18 @@
 <template>
-	<div>
-		<h2>Welcome!</h2>
-		<p>{{ route.path }}</p>
+	<div class="notification">
+		<Map />
 	</div>
 </template>
 
 <script setup lang="ts">
+import Map from '~/components/rtl/Map.vue';
+
 const route = useRoute();
 </script>
 
-<style scoped></style>
+<style scoped>
+.notification {
+	width: 100%;
+	height: 100%;
+}
+</style>

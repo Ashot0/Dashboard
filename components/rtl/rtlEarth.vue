@@ -1,77 +1,60 @@
 <template>
-	<div ref="earthContainer" class="earth-container"></div>
+	<div ref="chartDom" class="rtl-earth"></div>
 </template>
 
-<script setup lang="ts">
-// import * as THREE from 'three';
+<script setup>
+import { ref, onMounted } from 'vue';
+import * as echarts from 'echarts';
+import 'echarts-gl';
 
-// const earthContainer = ref<HTMLDivElement | null>(null);
+const ROOT_PATH = 'https://echarts.apache.org/examples';
 
-// onMounted(() => {
-// 	// Размеры контейнера
-// 	const width = earthContainer.value?.clientWidth || window.innerWidth;
-// 	const height = earthContainer.value?.clientHeight || window.innerHeight;
+const chartDom = ref(null);
 
-// 	// Сцена
-// 	const scene = new THREE.Scene();
-
-// 	// Камера
-// 	const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
-// 	camera.position.z = 5;
-
-// 	// Рендерер
-// 	const renderer = new THREE.WebGLRenderer({ antialias: true });
-// 	renderer.setSize(width, height);
-// 	if (earthContainer.value) {
-// 		earthContainer.value.appendChild(renderer.domElement);
-// 	}
-
-// 	// Геометрия Земли
-// 	const geometry = new THREE.SphereGeometry(1, 32, 32);
-
-// 	// Текстура Земли
-// 	const textureLoader = new THREE.TextureLoader();
-// 	const earthTexture = textureLoader.load(
-// 		'https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/earth_atmos_2048.jpg'
-// 	);
-
-// 	const material = new THREE.MeshStandardMaterial({ map: earthTexture });
-// 	const earth = new THREE.Mesh(geometry, material);
-// 	scene.add(earth);
-
-// 	// Освещение
-// 	const light = new THREE.PointLight(0xffffff, 1);
-// 	light.position.set(5, 5, 5);
-// 	scene.add(light);
-
-// 	// Анимация
-// 	const animate = () => {
-// 		requestAnimationFrame(animate);
-
-// 		// Вращение Земли
-// 		earth.rotation.y += 0.01;
-
-// 		renderer.render(scene, camera);
-// 	};
-
-// 	animate();
-
-// 	// Обработка изменения размера окна
-// 	window.addEventListener('resize', () => {
-// 		const newWidth = earthContainer.value?.clientWidth || window.innerWidth;
-// 		const newHeight = earthContainer.value?.clientHeight || window.innerHeight;
-
-// 		camera.aspect = newWidth / newHeight;
-// 		camera.updateProjectionMatrix();
-// 		renderer.setSize(newWidth, newHeight);
-// 	});
-// });
+onMounted(() => {
+	if (chartDom.value) {
+		const myChart = echarts.init(chartDom.value);
+		const option = {
+			backgroundColor: '#000',
+			globe: {
+				baseTexture: ROOT_PATH + '/data-gl/asset/world.topo.bathy.200401.jpg',
+				heightTexture: ROOT_PATH + '/data-gl/asset/world.topo.bathy.200401.jpg',
+				displacementScale: 0.04,
+				shading: 'realistic',
+				environment: ROOT_PATH + '/data-gl/asset/starfield.jpg',
+				realisticMaterial: {
+					roughness: 0.9,
+				},
+				postEffect: {
+					enable: true,
+				},
+				light: {
+					main: {
+						intensity: 5,
+						shadow: true,
+					},
+					ambientCubemap: {
+						texture: ROOT_PATH + '/data-gl/asset/pisa.hdr',
+						diffuseIntensity: 0.2,
+					},
+				},
+			},
+		};
+		myChart.setOption(option);
+		window.addEventListener('resize', myChart.resize);
+		onUnmounted(() => {
+			window.removeEventListener('resize', myChart.resize);
+			myChart.dispose();
+		});
+	}
+});
 </script>
 
-<style scoped>
-.earth-container {
+<style scoped lang="scss">
+.rtl-earth {
 	width: 100%;
-	height: 100vh;
+	height: 100%;
+	border-radius: 20px;
 	overflow: hidden;
 }
 </style>
