@@ -58,12 +58,18 @@ const props = defineProps<{
 	&__title {
 		color: var(--white-color);
 		margin-bottom: 4px;
+		@media (max-width: 640px) {
+			text-align: center;
+		}
 	}
 
 	&__sub-title {
 		color: var(--grey-color);
 		font-size: 14px;
 		font-weight: 500;
+		@media (max-width: 640px) {
+			text-align: center;
+		}
 	}
 
 	&__dashboard-wrapper {

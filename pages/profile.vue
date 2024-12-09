@@ -41,13 +41,13 @@ const route = useRoute();
 	}
 	@media (min-width: 1280px) and (max-width: 1440px) {
 		grid-template-rows: 129px 580px 485px;
-		grid-template-columns: 30% 40% 30%;
+		grid-template-columns: 30% 38% 30%;
 	}
 	@media (min-width: 768px) and (max-width: 1280px) {
-		grid-template-rows: 129px 377px 377px 377px 277px 377px;
+		grid-template-rows: 129px 377px 377px 377px 277px 1fr;
 	}
 	@media (max-width: 768px) {
-		grid-template-rows: 129px 377px 790px 377px 437px 377px;
+		grid-template-rows: 129px 377px 790px 377px 437px 1fr;
 	}
 	@media (max-width: 1280px) {
 		grid-template-columns: 100%;

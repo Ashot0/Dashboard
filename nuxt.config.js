@@ -1,6 +1,7 @@
 import svgLoader from 'vite-svg-loader';
 import Components from 'unplugin-vue-components/vite';
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
+import isEqual from 'lodash-es/isEqual.js';
 
 export default defineNuxtConfig({
 	compatibilityDate: '2024-11-01',
@@ -21,5 +22,13 @@ export default defineNuxtConfig({
 				],
 			}),
 		],
+	},
+	build: {
+		transpile: ['lodash-es'],
+	},
+	nitro: {
+		externals: {
+			inline: ['lodash-es'],
+		},
 	},
 });

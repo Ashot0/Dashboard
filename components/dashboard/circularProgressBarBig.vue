@@ -68,9 +68,10 @@ const props = defineProps<{
 	color: var(--white-color);
 	display: flex;
 	justify-content: space-between;
-	@media (max-width: 768px) {
+	@media (max-width: 640px) {
 		flex-direction: column;
 		height: fit-content;
+		align-items: center;
 	}
 	&__info {
 		position: relative;
@@ -79,6 +80,9 @@ const props = defineProps<{
 
 	&__title {
 		margin-bottom: 41px;
+		@media (max-width: 640px) {
+			text-align: center;
+		}
 	}
 
 	&__num-block {

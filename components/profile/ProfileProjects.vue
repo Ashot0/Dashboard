@@ -85,16 +85,20 @@ const projects = [
 
 	&__wrapper {
 		display: flex;
-		gap: 24px;
+		gap: 14px;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: space-evenly;
 	}
 
 	&__project {
-		max-width: 31%;
+		max-width: 30%;
 	}
 }
 .project {
+	min-width: 265px;
+	@media (max-width: 1280px) {
+		min-width: 370px;
+	}
 	&__image {
 		max-width: 370px;
 		height: 191.5px;

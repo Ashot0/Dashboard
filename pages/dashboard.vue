@@ -99,7 +99,7 @@ const num = [64, 46, 24, 58, 100, 82, 94, 58, 32];
 	display: flex;
 	gap: 24px 1%;
 	flex-wrap: wrap;
-	max-width: 99vw;
+	max-width: 100vw;
 	overflow: hidden;
 	&__small-num-block {
 		// max-width: 382px;
@@ -146,7 +146,7 @@ const num = [64, 46, 24, 58, 100, 82, 94, 58, 32];
 		}
 		@media (max-width: 768px) {
 			min-width: 310px;
-			max-width: 100%;
+			width: 100%;
 		}
 	}
 

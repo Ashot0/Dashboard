@@ -101,6 +101,7 @@ const checked = ref(true);
 	}
 
 	&__button {
+		cursor: pointer;
 		display: flex;
 		justify-content: center;
 		align-items: center;

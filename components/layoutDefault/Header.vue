@@ -63,9 +63,14 @@ const navigateTo = (link: string) => {
 	z-index: 25;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	font-family: var(--jakarta);
-	height: 52.5px;
-	margin: 22.5px 25.5px 0 15px;
+	// height: 52.5px;
+	margin: 22.5px 5.5px 0 15px;
+	padding: 10px 20px;
+	backdrop-filter: blur(10px);
+	border-radius: 20px;
+	border: 2px solid #ffffff30;
 	@media (max-width: 1600px) {
 		margin-left: 40px;
 	}

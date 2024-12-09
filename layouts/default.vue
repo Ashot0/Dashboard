@@ -49,7 +49,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
 import AsideNavbar from '~/components/layoutDefault/AsideNavbar.vue';
 import { gsap } from 'gsap';
 gsap.registerPlugin();

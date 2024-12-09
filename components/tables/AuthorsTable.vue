@@ -145,7 +145,7 @@ const props = defineProps<{
 
 		&_2 {
 			position: absolute;
-			left: 46.62%;
+			left: 44.62%;
 
 			@media (max-width: 640px) {
 				display: none;
