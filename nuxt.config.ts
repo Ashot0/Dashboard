@@ -22,4 +22,13 @@ export default defineNuxtConfig({
 			}),
 		],
 	},
+	router: {
+		options: {
+			linkActiveClass: 'active',
+			linkExactActiveClass: 'exact-active',
+		},
+	},
+	app: {
+		baseURL: '/',
+	},
 });
