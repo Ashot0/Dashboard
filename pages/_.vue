@@ -3,9 +3,10 @@
 </template>
 
 <script setup lang="ts">
-const router = useRouter();
+import { navigateTo } from 'nuxt/app';
+
 onMounted(() => {
-	router.push('/');
+	navigateTo('/');
 });
 </script>
 
