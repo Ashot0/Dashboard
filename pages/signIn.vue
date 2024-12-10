@@ -20,7 +20,7 @@ const route = useRoute();
 	// min-height: 100vh;
 	height: 100%;
 	display: flex;
-	margin-top: 120px;
+	margin-top: 200px;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
