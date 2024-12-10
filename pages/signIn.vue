@@ -17,9 +17,10 @@ const route = useRoute();
 
 <style scoped lang="scss">
 .sign-in {
-	min-height: 100vh;
+	// min-height: 100vh;
 	height: 100%;
 	display: flex;
+	margin-top: 120px;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;

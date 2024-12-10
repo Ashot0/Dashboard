@@ -22,7 +22,10 @@
 			</button>
 			<AsideNavbar />
 		</aside>
-		<main class="default-layout__page-wrapper">
+		<main
+			class="default-layout__page-wrapper"
+			:class="!leftBlock && 'default-layout__page-wrapper_visible'"
+		>
 			<LayoutDefaultHeader class="default-layout__header" />
 			<div class="default-layout__page-slot"><slot /></div>
 			<img
@@ -53,7 +56,7 @@ import AsideNavbar from '~/components/layoutDefault/AsideNavbar.vue';
 import { gsap } from 'gsap';
 gsap.registerPlugin();
 const rotatingBg = ref();
-const leftBlock = ref(false);
+const leftBlock = ref(true);
 
 const leftBlockHidden = () => {
 	leftBlock.value = !leftBlock.value;
@@ -85,6 +88,9 @@ onMounted(() => {
 		position: absolute;
 		left: 0;
 		transition: all 0.3s;
+		@media (max-width: 1600px) {
+			left: -100%;
+		}
 
 		&_visible {
 			@media (max-width: 1600px) {
@@ -104,7 +110,6 @@ onMounted(() => {
 		z-index: 25;
 		background: var(--background-dark-blue);
 		color: var(--white-color);
-		padding: 10px;
 		width: 40px;
 		height: 40px;
 		display: flex;
@@ -131,6 +136,11 @@ onMounted(() => {
 
 		&::-webkit-scrollbar {
 			display: none;
+		}
+		&_visible {
+			@media (max-width: 1600px) {
+				opacity: 0.4;
+			}
 		}
 	}
 	&__rotating-bg {

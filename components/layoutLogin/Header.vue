@@ -23,9 +23,14 @@
 				<SignUp />sign up
 			</button>
 		</nav>
-		<button class="header__btn blue-btn-base" type="button">
-			Free Download
-		</button>
+		<a
+			target="_blank"
+			href="https://ashot0.github.io/Portfolio.2.0-public/#/"
+			class="header__btn blue-btn-base"
+			type="button"
+		>
+			LINK
+		</a>
 	</header>
 </template>
 
@@ -91,6 +96,9 @@ const navigateTo = (link: string) => {
 	&__btn {
 		width: 150px;
 		height: 35px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		@media (max-width: 768px) {
 			display: none;
 		}
