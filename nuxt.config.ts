@@ -25,4 +25,10 @@ export default defineNuxtConfig({
 	app: {
 		baseURL: '/',
 	},
+	ssr: false,
+	router: {
+		options: {
+			hashMode: true,
+		},
+	},
 });
