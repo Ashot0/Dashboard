@@ -1,5 +1,5 @@
 <template>
-	<div class="notification">
+	<div class="stub">
 		<Map />
 	</div>
 </template>
@@ -11,7 +11,7 @@ const route = useRoute();
 </script>
 
 <style scoped>
-.notification {
+.stub {
 	width: 100%;
 	height: 100%;
 }

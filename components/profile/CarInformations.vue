@@ -45,12 +45,6 @@
 						:is="info.image"
 					/>
 				</div>
-
-				<!-- 	
-	<div class="car-informations__battery-health"></div>
-	<div class="car-informations__consumption"></div>
-	<div class="car-informations__efficiency"></div>
-	<div class="car-informations__this-week"></div> -->
 			</div>
 		</div>
 	</div>
@@ -77,7 +71,7 @@ const carInformationsBlocks = [
 	},
 	{
 		name: 'Consumption',
-		num: '163W/km',
+		num: '163km',
 		image: CarInformationsIcon2,
 	},
 	{

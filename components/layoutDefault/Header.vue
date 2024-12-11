@@ -2,7 +2,9 @@
 	<header class="header">
 		<div class="header__breadcrumb">
 			<h2 class="header__path">
-				<span class="header__path_grey">Pages</span> / {{ pageTitle }}
+				<NuxtLink to="/stub" class="header__path_grey">Pages</NuxtLink>
+				/
+				{{ pageTitle }}
 			</h2>
 			<h3 class="header__title">{{ pageTitle }}</h3>
 		</div>
@@ -28,7 +30,7 @@
 				<SettingIcon class="header__setting-icon" />
 			</button>
 			<button
-				@click="navigateTo('/notification')"
+				@click="navigateTo('/stub')"
 				class="header__notification"
 				type="button"
 			>
@@ -83,6 +85,7 @@ const navigateTo = (link: string) => {
 	}
 
 	&__path {
+		cursor: pointer;
 		position: relative;
 		line-height: 140%;
 		color: var(--white-color);
@@ -95,6 +98,7 @@ const navigateTo = (link: string) => {
 	}
 
 	&__title {
+		cursor: pointer;
 		position: relative;
 		line-height: 140%;
 		color: var(--white-color);
