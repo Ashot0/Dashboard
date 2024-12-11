@@ -167,8 +167,8 @@ onMounted(() => {
 		z-index: 0;
 		width: 125vw;
 		left: 50%;
-		top: 50vh;
-		translate: -50% -50%;
+		// top: 50vh;
+		// translate: -50% -50%;
 		position: fixed;
 	}
 	&__navbar {
