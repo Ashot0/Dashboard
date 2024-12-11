@@ -155,8 +155,6 @@ onMounted(() => {
 		&_visible {
 			@media (max-width: 1600px) {
 				opacity: 0.4;
-				overflow: hidden;
-				height: calc(100vh - 10px);
 				* {
 					pointer-events: none;
 				}
@@ -167,8 +165,6 @@ onMounted(() => {
 		z-index: 0;
 		width: 125vw;
 		left: 50%;
-		// top: 50vh;
-		// translate: -50% -50%;
 		position: fixed;
 	}
 	&__navbar {
