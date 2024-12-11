@@ -25,6 +25,7 @@
 		<main
 			class="default-layout__page-wrapper"
 			:class="!leftBlock && 'default-layout__page-wrapper_visible'"
+			@click="leftBlockCloseClick"
 		>
 			<LayoutDefaultHeader class="default-layout__header" />
 			<div class="default-layout__page-slot"><slot /></div>
@@ -61,6 +62,12 @@ const leftBlock = ref(true);
 const leftBlockHidden = () => {
 	leftBlock.value = !leftBlock.value;
 };
+function leftBlockCloseClick(event: any) {
+	if (!leftBlock.value) {
+		leftBlock.value = !leftBlock.value;
+		event.stopPropagation();
+	}
+}
 onMounted(() => {
 	gsap.to(rotatingBg.value, {
 		rotationZ: '360deg',
@@ -74,14 +81,26 @@ onMounted(() => {
 <style lang="scss" scoped>
 .default-layout {
 	font-family: var(--jakarta);
-	padding: 10px 22px 40px 10px;
+	padding: 0 20px 20px 20px;
 	min-height: 100vh;
 	display: flex;
-	gap: 24px;
+	gap: 12px;
 	background-color: var(--background-dark-blue);
-
+	max-width: 100vw;
+	@media (max-width: 1024px) {
+		padding: 0 20px 10px 20px;
+	}
 	@media (min-width: 1600px) {
 		padding-left: 288px;
+	}
+	&::-webkit-scrollbar {
+		background-color: var(--nav-btn-background);
+		width: 8px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: var(--nav-btn-icon-color);
+		border-radius: 8px;
+		opacity: 0.5;
 	}
 	&__aside {
 		z-index: 25;
@@ -105,8 +124,8 @@ onMounted(() => {
 	}
 	&__aside-btn {
 		position: fixed;
-		top: 15px;
-		left: 5px;
+		top: 22.5px;
+		left: 22.5px;
 		z-index: 25;
 		background: var(--background-dark-blue);
 		color: var(--white-color);
@@ -121,7 +140,7 @@ onMounted(() => {
 		}
 	}
 	&__header {
-		top: 0;
+		top: 10px;
 		position: sticky;
 		z-index: 20;
 	}
@@ -133,21 +152,22 @@ onMounted(() => {
 		flex: 1;
 		height: auto;
 		min-height: 100vh;
-
-		&::-webkit-scrollbar {
-			display: none;
-		}
 		&_visible {
 			@media (max-width: 1600px) {
 				opacity: 0.4;
+				overflow: hidden;
+				height: calc(100vh - 10px);
+				* {
+					pointer-events: none;
+				}
 			}
 		}
 	}
 	&__rotating-bg {
 		z-index: 0;
 		width: 125vw;
-		top: 50%;
 		left: 50%;
+		top: 50vh;
 		translate: -50% -50%;
 		position: fixed;
 	}
@@ -170,22 +190,3 @@ onMounted(() => {
 	}
 }
 </style>
-
-<!-- const iconsList = [
-  'CartIcon',
-  'DocumentIcon',
-  'GlobeIcon',
-  'NavBillingIcon',
-  'NavDashboardIcon',
-  'NavNeedhelpIcon',
-  'NavProfileIcon',
-  'NavRTLIcon',
-  'NavSignInIcon',
-  'NavSignUpIcon',
-  'NavTablesIcon',
-  'NotificationIcon',
-  'PersonIcon',
-  'SearchIcon',
-  'SettingIcon',
-  'WalletIcon',
-]; -->

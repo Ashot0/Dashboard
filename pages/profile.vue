@@ -16,9 +16,9 @@ const route = useRoute();
 <style scoped lang="scss">
 .profile {
 	display: grid;
-	grid-template-columns: 23% 45.63% 28.19%;
+	grid-template-columns: 1fr 45.63% 28.19%;
 	grid-template-rows: 129px 377px 485px;
-	grid-column-gap: 1.5%;
+	grid-column-gap: 12px;
 	grid-row-gap: 25px;
 
 	&__profile-head {

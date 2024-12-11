@@ -99,8 +99,12 @@ const num = [64, 46, 24, 58, 100, 82, 94, 58, 32];
 	display: flex;
 	gap: 24px 1%;
 	flex-wrap: wrap;
-	max-width: 100vw;
-	overflow: hidden;
+	width: fit-content;
+	justify-content: space-between;
+	@media (max-width: 640px) {
+		width: 100%;
+	}
+
 	&__small-num-block {
 		// max-width: 382px;
 		width: 24%;
@@ -116,7 +120,7 @@ const num = [64, 46, 24, 58, 100, 82, 94, 58, 32];
 
 	&__welcome-back-block {
 		min-width: 290px;
-		width: 40.75%;
+		width: 40%;
 		height: 344px;
 
 		@media (max-width: 1280px) {
@@ -126,7 +130,7 @@ const num = [64, 46, 24, 58, 100, 82, 94, 58, 32];
 
 	&__circular-progress-bar-small {
 		min-width: 250px;
-		width: 21.88%;
+		flex: 1;
 		@media (max-width: 1280px) and (min-width: 1024px) {
 			width: 49%;
 		}
@@ -137,7 +141,7 @@ const num = [64, 46, 24, 58, 100, 82, 94, 58, 32];
 
 	&__circular-progress-bar-big {
 		min-width: 451px;
-		width: 34.44%;
+		width: 34%;
 		@media (max-width: 1280px) and (min-width: 1024px) {
 			width: 49%;
 		}
@@ -145,20 +149,20 @@ const num = [64, 46, 24, 58, 100, 82, 94, 58, 32];
 			width: 100%;
 		}
 		@media (max-width: 768px) {
-			min-width: 310px;
+			min-width: fit-content;
 			width: 100%;
 		}
 	}
 
 	&__graph-big-block {
-		width: 57.75%;
+		flex: 1;
 		min-width: 412px;
 		@media (max-width: 1280px) and (min-width: 1024px) {
 			width: 49%;
 		}
 		@media (max-width: 1024px) {
 			width: 100%;
-			min-width: 100%;
+			min-width: fit-content;
 			max-width: 100%;
 		}
 	}
@@ -171,7 +175,7 @@ const num = [64, 46, 24, 58, 100, 82, 94, 58, 32];
 		}
 		@media (max-width: 1024px) {
 			width: 100%;
-			min-width: 100%;
+			min-width: fit-content;
 		}
 	}
 
@@ -183,7 +187,7 @@ const num = [64, 46, 24, 58, 100, 82, 94, 58, 32];
 	}
 
 	&__orders-block-middle {
-		width: 32.44%;
+		flex: 1;
 		@media (max-width: 1024px) {
 			width: 100%;
 		}

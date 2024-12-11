@@ -16,9 +16,9 @@ const route = useRoute();
 <style scoped lang="scss">
 .billing {
 	display: grid;
-	grid-template-columns: 28.75% 26% 42.13%;
+	grid-template-columns: 28.75% 26% 1fr;
 	grid-template-rows: 240px 172px 538px;
-	grid-column-gap: 24px;
+	grid-column-gap: 12px;
 	grid-row-gap: 24px;
 	color: var(--white-color);
 

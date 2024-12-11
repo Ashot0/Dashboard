@@ -25,20 +25,17 @@ const router = useRouter();
 </script>
 <style scoped lang="scss">
 .help-section-navbar {
-	background: center / contain no-repeat
-		url('/assets/Images/BackgroundHelp.png');
+	background: center / cover no-repeat url('/assets/Images/BackgroundHelp.png');
 	width: calc(100% - 16px);
 	position: relative;
 	margin: 23px 8px 8px 8px;
 	padding: 16px;
 	bottom: 0;
 	left: 0;
-	height: 169.5px;
 	border-radius: 15px;
+
 	@media (max-width: 768px) {
 		width: 100%;
-		background: center / cover no-repeat
-			url('/assets/Images/BackgroundHelp.png');
 	}
 	&__link {
 		display: flex;

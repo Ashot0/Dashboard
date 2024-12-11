@@ -66,14 +66,17 @@ import {
 			rgba(26, 31, 55, 0) 100%
 		);
 
-		min-width: 264px;
+		min-width: 304px;
 		max-height: 1135px;
 		height: 100%;
-		border-radius: 20px;
 		padding: 0 15px 15px 15px;
 		overflow: auto;
 		&::-webkit-scrollbar {
 			display: none;
+		}
+		@media (min-width: 1600px) {
+			border-radius: 20px;
+			min-width: 264px;
 		}
 		@media (max-width: 1600px) {
 			background: rgb(26, 31, 55);

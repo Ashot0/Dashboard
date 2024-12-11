@@ -12,3 +12,14 @@
 	font-weight: bold;
 	line-height: 150%;
 }
+:root {
+	&::-webkit-scrollbar {
+		background-color: var(--nav-btn-background);
+		width: 8px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: var(--nav-btn-icon-color);
+		border-radius: 8px;
+		opacity: 0.5;
+	}
+}

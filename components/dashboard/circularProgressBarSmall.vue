@@ -108,7 +108,7 @@ const props = defineProps<{
 		background: rgb(6, 11, 40);
 		background: linear-gradient(
 			135deg,
-			rgba(6, 11, 40, 0.74) 0%,
+			rgba(6, 11, 40, 1) 0%,
 			rgba(10, 14, 35, 0.71) 100%
 		);
 		display: flex;

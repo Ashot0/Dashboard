@@ -95,7 +95,7 @@ const projects = [
 	}
 }
 .project {
-	min-width: 265px;
+	min-width: 260px;
 	@media (max-width: 1280px) {
 		min-width: 370px;
 	}

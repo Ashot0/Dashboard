@@ -117,6 +117,8 @@ const props = defineProps<{
 		rgba(6, 11, 40, 0.74) 0%,
 		rgba(10, 14, 35, 0.71) 100%
 	);
+	max-width: 100vw;
+	max-width: 100%;
 	&__title {
 		font-size: 18px;
 		font-weight: bold;
@@ -144,6 +146,9 @@ const props = defineProps<{
 		max-width: 100vw;
 		overflow: hidden;
 		height: 296.5px;
+		@media (max-width: 1024px) {
+			max-width: 80vw;
+		}
 	}
 }
 </style>

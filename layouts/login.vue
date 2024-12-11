@@ -30,6 +30,7 @@
 	&::-webkit-scrollbar {
 		display: none;
 	}
+
 	&__header {
 		z-index: 11;
 	}

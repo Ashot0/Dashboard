@@ -64,7 +64,7 @@ const props = defineProps<{
 .progress-bars-block {
 	height: 445px;
 	border-radius: 20px;
-	padding: 16px 16px 30.5px 8px;
+	padding: 16px;
 	background: rgb(6, 11, 40);
 	background: linear-gradient(
 		135deg,
@@ -80,7 +80,7 @@ const props = defineProps<{
 		width: 100%;
 		height: 222px;
 		padding: 35px;
-		border-radius: 20px;
+		border-radius: 10px;
 		margin-bottom: 24px;
 		background: rgb(6, 12, 41);
 		background: linear-gradient(

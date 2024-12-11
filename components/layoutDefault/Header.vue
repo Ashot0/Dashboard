@@ -66,13 +66,13 @@ const navigateTo = (link: string) => {
 	align-items: center;
 	font-family: var(--jakarta);
 	// height: 52.5px;
-	margin: 22.5px 5.5px 0 15px;
+	margin: 0 -10px 10px -10px;
 	padding: 10px 20px;
 	backdrop-filter: blur(10px);
 	border-radius: 20px;
 	border: 2px solid #ffffff30;
 	@media (max-width: 1600px) {
-		margin-left: 40px;
+		padding: 10px 20px 10px 60px;
 	}
 	&__breadcrumb {
 		position: relative;

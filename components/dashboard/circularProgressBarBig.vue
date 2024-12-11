@@ -87,9 +87,10 @@ const props = defineProps<{
 
 	&__num-block {
 		height: 93px;
-		width: 100%;
-		// width: 217px;
-		// width: clamp(100px, 140%, 217px);
+		width: 80%;
+		@media (max-width: 1024px) {
+			width: 100%;
+		}
 		padding: 20px 20px 29px 24px;
 		margin: 0 0 21px 6.45%;
 		background: rgb(6, 12, 41);
