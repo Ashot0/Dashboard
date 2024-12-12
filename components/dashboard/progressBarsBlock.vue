@@ -58,6 +58,9 @@ const props = defineProps<{
 		percent: number;
 	}[];
 }>();
+props.items.forEach((item) => {
+	item.image = markRaw(item.image);
+});
 </script>
 
 <style scoped lang="scss">

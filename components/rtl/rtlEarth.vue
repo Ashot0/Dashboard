@@ -33,13 +33,10 @@ onMounted(() => {
 						intensity: 5,
 						shadow: true,
 					},
-					ambientCubemap: {
-						texture: earth,
-						diffuseIntensity: 0.2,
-					},
 				},
 			},
 		};
+
 		myChart.setOption(option);
 		window.addEventListener('resize', myChart.resize);
 		onUnmounted(() => {

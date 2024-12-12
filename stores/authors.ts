@@ -22,7 +22,7 @@ export const useAuthorsStore = defineStore('authors', {
 	state: () => ({
 		authors: [
 			{
-				image: ImageAuthor1,
+				image: shallowRef(ImageAuthor1),
 				name: 'Esthera Jackson',
 				email: 'esthera@simmmple.com',
 				function1: 'Manager',
@@ -31,7 +31,7 @@ export const useAuthorsStore = defineStore('authors', {
 				employed: '14/06/21',
 			},
 			{
-				image: ImageAuthor2,
+				image: shallowRef(ImageAuthor2),
 				name: 'Alexa Liras',
 				email: 'alexa@simmmple.com',
 				function1: 'Programmer',
@@ -40,7 +40,7 @@ export const useAuthorsStore = defineStore('authors', {
 				employed: '14/06/21',
 			},
 			{
-				image: ImageAuthor3,
+				image: shallowRef(ImageAuthor3),
 				name: 'Laurent Michael',
 				email: 'laurent@simmmple.com',
 				function1: 'Executive',
@@ -49,7 +49,7 @@ export const useAuthorsStore = defineStore('authors', {
 				employed: '14/06/21',
 			},
 			{
-				image: ImageAuthor4,
+				image: shallowRef(ImageAuthor4),
 				name: 'Freduardo Hill',
 				email: 'freduardo@simmmple.com',
 				function1: 'Manager',
@@ -58,7 +58,7 @@ export const useAuthorsStore = defineStore('authors', {
 				employed: '14/06/21',
 			},
 			{
-				image: ImageAuthor5,
+				image: shallowRef(ImageAuthor5),
 				name: 'Daniel Thomas',
 				email: 'daniel@simmmple.com',
 				function1: 'Programmer',
@@ -67,7 +67,7 @@ export const useAuthorsStore = defineStore('authors', {
 				employed: '14/06/21',
 			},
 			{
-				image: ImageAuthor6,
+				image: shallowRef(ImageAuthor6),
 				name: 'Mark Wilson',
 				email: 'mark@simmmple.com',
 				function1: 'Designer',

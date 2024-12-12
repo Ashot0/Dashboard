@@ -22,6 +22,7 @@ import { ref, watch } from 'vue';
 const props = defineProps<{
 	name: string;
 	link: string;
+	closeNavbar: Function;
 }>();
 const router = useRouter();
 const route = useRoute();
@@ -29,6 +30,7 @@ const activeLink = ref(false);
 
 const navigateTo = () => {
 	router.push(props.link);
+	props.closeNavbar();
 };
 const activate = () => {
 	if (route.path === props.link) {

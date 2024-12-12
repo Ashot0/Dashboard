@@ -15,7 +15,7 @@ export const useItemsStore = defineStore('items', {
 		items: [
 			{
 				id: 1,
-				image: WalletIcon,
+				image: shallowRef(WalletIcon),
 				title: 'Users',
 				num: '32,984',
 				sumbol: '',
@@ -23,7 +23,7 @@ export const useItemsStore = defineStore('items', {
 			},
 			{
 				id: 2,
-				image: Rocket,
+				image: shallowRef(Rocket),
 				title: 'Clicks',
 				num: '2,45',
 				sumbol: 'm',
@@ -31,7 +31,7 @@ export const useItemsStore = defineStore('items', {
 			},
 			{
 				id: 3,
-				image: CartIcon,
+				image: shallowRef(CartIcon),
 				title: 'Sales',
 				num: '2,400',
 				sumbol: '$',
@@ -39,7 +39,7 @@ export const useItemsStore = defineStore('items', {
 			},
 			{
 				id: 4,
-				image: SettingKey,
+				image: shallowRef(SettingKey),
 				title: 'Items',
 				num: '320',
 				sumbol: '',

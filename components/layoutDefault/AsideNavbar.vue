@@ -4,26 +4,54 @@
 			<header class="aside-navbar__title">VISION UI FREE</header>
 			<div class="aside-navbar__line"></div>
 			<menu class="aside-navbar__menu">
-				<LayoutDefaultLinkButtonNavbar :name="'Dashboard'" :link="'/dashboard'">
+				<LayoutDefaultLinkButtonNavbar
+					:closeNavbar="closeNavbar"
+					:name="'Dashboard'"
+					:link="'/dashboard'"
+				>
 					<NavDashboardIcon />
 				</LayoutDefaultLinkButtonNavbar>
-				<LayoutDefaultLinkButtonNavbar :name="'Tables'" :link="'/tables'">
+				<LayoutDefaultLinkButtonNavbar
+					:closeNavbar="closeNavbar"
+					:name="'Tables'"
+					:link="'/tables'"
+				>
 					<NavTablesIcon />
 				</LayoutDefaultLinkButtonNavbar>
-				<LayoutDefaultLinkButtonNavbar :name="'Billing'" :link="'/billing'">
+				<LayoutDefaultLinkButtonNavbar
+					:closeNavbar="closeNavbar"
+					:name="'Billing'"
+					:link="'/billing'"
+				>
 					<NavBillingIcon />
 				</LayoutDefaultLinkButtonNavbar>
-				<LayoutDefaultLinkButtonNavbar :name="'RTL'" :link="'/rtl'">
+				<LayoutDefaultLinkButtonNavbar
+					:closeNavbar="closeNavbar"
+					:name="'RTL'"
+					:link="'/rtl'"
+				>
 					<NavRTLIcon />
 				</LayoutDefaultLinkButtonNavbar>
 				<h2 class="aside-navbar__sub-title">ACCOUNT PAGES</h2>
-				<LayoutDefaultLinkButtonNavbar :name="'Profile'" :link="'/profile'">
+				<LayoutDefaultLinkButtonNavbar
+					:closeNavbar="closeNavbar"
+					:name="'Profile'"
+					:link="'/profile'"
+				>
 					<NavProfileIcon />
 				</LayoutDefaultLinkButtonNavbar>
-				<LayoutDefaultLinkButtonNavbar :name="'SignIn'" :link="'/signIn'">
+				<LayoutDefaultLinkButtonNavbar
+					:closeNavbar="closeNavbar"
+					:name="'SignIn'"
+					:link="'/signIn'"
+				>
 					<NavSignInIcon />
 				</LayoutDefaultLinkButtonNavbar>
-				<LayoutDefaultLinkButtonNavbar :name="'SignUp'" :link="'/signUp'">
+				<LayoutDefaultLinkButtonNavbar
+					:closeNavbar="closeNavbar"
+					:name="'SignUp'"
+					:link="'/signUp'"
+				>
 					<NavSignUpIcon />
 				</LayoutDefaultLinkButtonNavbar>
 			</menu>
@@ -44,6 +72,14 @@ import {
 	NavSignUpIcon,
 	NavTablesIcon,
 } from '@/assets/Icons/icons';
+const props = defineProps({
+	onClose: Function,
+});
+const closeNavbar = () => {
+	if (typeof props.onClose === 'function') {
+		props.onClose();
+	}
+};
 </script>
 
 <style lang="scss" scoped>

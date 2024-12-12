@@ -73,6 +73,9 @@ const props = defineProps<{
 		completion: number;
 	}[];
 }>();
+props.projects.forEach((project) => {
+	project.image = shallowRef(project.image);
+});
 </script>
 
 <style scoped lang="scss">

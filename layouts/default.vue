@@ -20,7 +20,7 @@
 			>
 				☰
 			</button>
-			<AsideNavbar />
+			<AsideNavbar :onClose="leftBlockHidden" />
 		</aside>
 		<main
 			class="default-layout__page-wrapper"
